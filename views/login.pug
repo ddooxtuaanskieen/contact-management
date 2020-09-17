@@ -1,0 +1,20 @@
+extends ./layout/general
+block Content
+    link(rel="stylesheet", href="/css/login.css")
+    .row.content
+        .col.left-side
+            img(src="https://www.salesbabu.com/wp-content/uploads/2014/07/contact-mgmt.png", 
+            alt="")
+        .col.right-side
+            form(action="", method="post")
+                input(type="text", name="username", placeholder="Username", value = lastInfo ? lastInfo.username : '')
+                br
+                input(type="password", name="password", placeholder="Password")
+                br
+                input(type="submit", value="Login")
+            p
+                |Don't have an account?
+                a(href="/register") Register now
+            p
+                |Forgot your account?
+                a(href="/forgot") Get it

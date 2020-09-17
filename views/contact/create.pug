@@ -1,0 +1,15 @@
+extends ../layout/general
+block Content
+    h3 Contact Create
+    form(action="", method="post", enctype="multipart/form-data")
+        label(for="") Name
+        input(type="text", name="name")
+        br
+        label(for="") Phone
+        input(type="number", name="phone")
+        br
+        label(for="") Avatar
+        input(type="file", name="avatar")
+        br
+        input(type="submit", value="Create")
+    a(href="") Cancel

@@ -1,0 +1,15 @@
+extends ./layout/general
+block Content
+    h3 Register
+    form(action="", method="post")
+        input(type="text", name="username", placeholder="Username")
+        br
+        input(type="password", name="password", placeholder="Password")
+        br
+        input(type="password", name="retype-password", placeholder="Retype Password")
+        br
+        input(type="email", name="email", placeholder="Email")
+        br
+        input(type="number", name="phone", placeholder="Phone")
+        br
+        input(type="submit", value="Register")

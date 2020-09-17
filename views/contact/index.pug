@@ -1,0 +1,42 @@
+extends ../layout/general
+block Content
+    link(rel="stylesheet", href="css/contact/index.css")
+    .row.nav-bar
+        .col
+            a(href="/contacts/create")
+                <i class="fas fa-user-plus fa-3x"></i>
+        .col    
+            ul
+                li #{username}
+                li
+                    a(href="#") Info
+                li
+                    a(href="/logout") Logout
+    if !contacts
+        p
+            |No contact here.
+            a(href="/contacts/create") Create one
+    else
+        form(action="", method="get")
+            input(type="text", name="keyword", placeholder="Type here...")
+            input(type="submit", value="Search")
+        table
+            tr
+                th Avatar
+                th Name
+                th Phone
+                th Action
+                
+            each val in contacts
+                tr
+                    td
+                        img(src="" + val.avatar, alt="")
+                    td=val.name
+                    td=val.phone
+                    td
+                        a(href="/contacts/detail/" + val._id) Detail
+                        a(href="/contacts/update/" + val._id) Update
+                        a(href="/contacts/delete/" + val._id) Delete
+
+
+

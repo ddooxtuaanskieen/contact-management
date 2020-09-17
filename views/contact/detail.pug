@@ -1,0 +1,10 @@
+extends ../layout/general
+block Content
+    if !contact
+        p No contact found!
+    else
+        h3 Contact Detail
+        div
+            img(src="", alt="logo")
+            span= contact.name
+            span= contact.phone
