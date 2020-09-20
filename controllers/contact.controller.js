@@ -66,8 +66,10 @@ let CreatePost = async function (req, res) {
 }
 let UpdateGet = async function (req, res) {
     try {
+        console.log(req.get('host'))
         let contactID = req.params.contactID
         let contact = await contactModel.findById(contactID)
+        contact.avatar = req.get('host') + '/' + contact.avatar
         res.render('contact/update', { contact: contact })
     } catch (error) {
         console.log(error)
@@ -79,6 +81,7 @@ let UpdatePost = async function (req, res) {
         let contact = await contactModel.findById(contactID)
         contact.name = req.body.name
         contact.phone = req.body.phone
+        contact.avatar = req.file ? req.file.path.split('\\').slice(1).join('/') : contact.avatar
         await contact.save()
         res.redirect('/contacts')
     } catch (error) {

@@ -17,12 +17,12 @@ app.use(cookieParser())
 app.set('view engine', 'pug')
 app.set('views', 'views')
 app.use(express.static('public'))
-
 let connectFunc = async function () {
   await mongoose.connect('mongodb://localhost/ContactManagement', {
     useNewUrlParser: true, useUnifiedTopology: true
   })
 }
+
 try {
   connectFunc()
   console.log('Connected to Database')

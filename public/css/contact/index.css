@@ -1,0 +1,60 @@
+.nav-bar{
+    padding: 0.5rem 2rem;
+    background-color: #dfdfdf;
+}
+.nav-bar .left-side{
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: row;
+    align-items: center;
+    color:red
+}
+.nav-bar .right-side{
+    display: flex;
+    justify-content: flex-end;
+
+}
+.nav-bar .right-side .user{
+    display: flex;
+}
+.nav-bar .right-side .user img{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    margin: 0 0.5rem;
+    border: 1px solid #7a7575;
+}
+.nav-bar .right-side ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+.nav-bar .right-side li{
+    list-style: none;
+}
+.contacts{
+    text-align: center;
+    padding: 1rem 0;
+}
+.contacts input[type="text"],.contacts input[type="submit"]{
+    /* padding: 0;
+    margin: 0; */
+}
+.contacts input[type="submit"]{
+    font-size: 1.2rem
+}
+.contacts table th, td{
+    text-align: center;
+    vertical-align: middle;
+}
+.contacts table img{
+    width: 4rem;
+    height: 4rem;
+}
+.contacts table td a{
+    margin: 0 0.3rem;
+    padding: 0.5rem 1rem;
+}
+

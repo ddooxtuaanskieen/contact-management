@@ -1,0 +1,23 @@
+body{
+    display: flex;
+    align-items: center;
+}
+.left-side, .right-side{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.left-side{
+    border-right: #585454 solid 0.3rem;
+}
+.right-side{
+    border-left: #585454 solid 0.3rem;
+}
+.right-side p{
+    margin: 0.2rem 0;
+}
+.right-side p a{
+    margin: auto 0.5rem;
+}
